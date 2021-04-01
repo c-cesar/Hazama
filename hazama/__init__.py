@@ -23,7 +23,7 @@ __author__ = 'krrr'
 
 def main_entry():
     import time
-    start_time = time.clock()
+    start_time = time.time()
     import logging
     import sys
     from hazama import config
@@ -43,7 +43,7 @@ def main_entry():
 
     w = MainWindow()
     w.show()
-    logging.debug('startup took %.2f sec', time.clock()-start_time)
+    logging.debug('startup took %.2f sec', time.time()-start_time)
 
     if config.settings['Main'].getboolean('backup'):
         try:
